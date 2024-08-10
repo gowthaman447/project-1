@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.robot {
+    width: 150px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.head {
+    width: 100px;
+    height: 100px;
+    background-color:lightskyblue;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    animation: headDance 2s infinite ease-in-out;
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+.left_eye, .right_eye {
+    width: 20px;
+    height: 20px;
+    background-color: chocolate;
+    border-radius: 50%;
+}
+
+.body {
+    width: 100px;
+    height: 150px;
+    background-color: lightskyblue;
+    margin: 0 auto;
+    position: relative;
+}
+
+.left_arm, .right_arm {
+    width: 20px;
+    height: 80px;
+    background-color: blue;
+    position: absolute;
+    top: 30px;
+    animation: armDance 2s infinite ease-in-out;
+}
+
+.left_arm {
+    left: -30px;
+    transform-origin: top right;
+}
+
+.right_arm {
+    right: -30px;
+    transform-origin: top left;
+}
+
+.stomach {
+    width: 60px;
+    height: 80px;
+    background-color:blue;
+    margin: 0 auto;
+    position: relative;
+    top: 35px;
+}
+
+.lower_body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left_leg, .right_leg {
+    width: 20px;
+    height: 100px;
+    background-color:lightskyblue;
+    animation: legDance 2s infinite ease-in-out;
+}
+
+.left_leg {
+    margin-left: 15px;
+    transform-origin: top center;
+}
+
+.right_leg {
+    margin-right: 15px;
+    transform-origin: top center;
+}
+
+/* Animation for the head rotation */
+@keyframes headDance {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    75% {
+        transform: rotate(15deg);
+    }
+}
+
+/* Animation for the arm rotation */
+@keyframes armDance {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+}
+
+/* Animation for the leg rotation */
+@keyframes legDance {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
